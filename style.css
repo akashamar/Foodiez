@@ -1,0 +1,505 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.food{
+    background: radial-gradient(rgb(235, 183, 183),red);
+}
+
+nav{
+    min-height: 10vh;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+#navbar {
+    height: 40px;
+    width: 40px;
+}
+
+.logo{
+    font-size: 17;
+    font:  bold italic;
+}
+
+.model-left,.model-right{
+   width: 200;
+   height: 250;
+}
+
+.page{
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 5% 1fr 500px 1fr 5%;
+    align-items: center;
+    justify-content: center;
+} 
+
+.burger,.pizza{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+}
+.hero a{
+    display: flex;
+}
+.hero{
+    overflow: hidden;
+    margin-bottom: 40px;
+    height: 250;
+    width: 505;
+    align-self: center;
+    justify-content: center;
+    display: flex;
+} 
+
+.hero img{
+    transition: transform 0.3s ease-out;
+    cursor: pointer;
+}
+
+.model-right{
+    transform: translate(0%, 10%);
+}
+
+.hero:hover .model-right{
+    transform: translate(0%, 0%);
+}
+
+.model-left{
+    transform: translate(0%, -10%);
+}
+
+.hero:hover .model-left{
+    transform: translate(0%, 0%);
+}
+
+.details{
+    grid-column: 2/3;
+    align-self: end;
+}
+
+.details h1 {
+    font-size: 28px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.details p {
+    font-size: 20px;
+    padding: 20px 0px 50px;
+}
+
+.pages {
+  position: absolute;
+  right: 5%;
+  top:55%;
+}
+
+.slide {
+  height: 8px;
+  width: 8px;
+  cursor: pointer;
+  opacity: 0.5;
+  transform: scale(1.6);
+}
+
+.pages > div {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+.pages h5 {
+    padding: 10px;
+}
+
+.slide:hover {
+    animation: dot 0.5s ease-in-out infinite alternate;
+}
+
+.pages img.active {
+   opacity: 1;
+}
+
+@keyframes dot {
+    0%{
+        transform: scale(1.4);
+    }
+    100%{
+        transform: scale(2.7);
+    }
+}
+
+.banner{
+    height: 75vh;
+    width: 100%;
+    position: relative;
+}
+
+.banner img{
+    height: 100%;
+    width: 100%;
+    object-position: top;
+}
+
+.heading{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 28px;
+    font-weight: 0;
+    font: thin;
+}
+
+#head2{
+    position: absolute;
+    top: 70%;
+    left: -7%;
+    padding-top: 10px;
+}
+
+.about,.other{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    padding: 80px 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-description,.other-description{
+    width: 50%;
+}
+.about-description h3,.other-description h3{
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+.about-description p,.other-description p{
+    padding: 20px 0px;
+    font-size: 15px;
+}
+
+.profile img{
+    height: 42vh;
+    width: 42vw;
+}
+
+.profile{
+    transform: translate(0,25%);
+}
+
+.grilledchicken{
+    background: radial-gradient(rgb(235, 183, 183),red);
+}
+
+.work-gallery img{
+    height: 25vh;
+    width: 25vw;
+}
+
+.work-gallery{
+    display: grid;
+    grid-template-columns: repeat(2,240px);
+    height: 300px;
+    justify-content: center;
+    align-content: center;
+    
+    transform: translate(0,30%);
+    overflow: hidden;
+}
+.burgerback{
+    background: radial-gradient(#0129FF,#03010C);
+    color: white;
+}
+.pizzaback{
+    background: radial-gradient(#FF1F00,#3A0F81);
+    color: white;
+}
+.nav-open{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 50vh;
+    background: white;
+    z-index: 1;
+    color: black;
+    display: grid;
+    grid-template-columns: 5% 1fr 1fr 5%;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    transform: translatey(-100%);
+}
+
+.contact{
+    grid-column: 2/3;
+}
+
+.nav-open h3{
+    font-size: 22px;
+    padding-bottom: 40px;
+}
+
+.nav-open p{
+    font-size: 14px;
+}
+.social-links img{
+    height: 20px;
+    width: 20px;
+    padding: 0px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.logo,
+.menu{
+    z-index: 2;
+}
+a{
+    text-decoration: none;
+}
+
+@media(max-width:1024px){
+    .page{
+        grid-template-columns: 5% 1fr 5% ;
+        grid-template-rows: 2fr 0.5fr;
+        justify-content: center;
+    }
+    .hero{
+        grid-column: 2/3;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+    }
+    .details{
+        grid-row: 2/3;
+        text-align: center;
+    }
+    .pages{
+        transform: translate(0,-70%);
+    }
+    .details h1{
+        font-size: 22px;
+    }
+    .details p{
+        font-size: 16px;
+    }
+
+    .about,.other{
+        flex-direction: column;
+    }
+    .about-description,.other-description{
+        width: 100%;
+    }
+    .profile img{
+       width: auto;
+    }
+    .work-gallery img{
+        width: auto;
+       height: 30vh;
+    }
+    .work-gallery{
+        width: 470;
+        height: 311;
+        overflow: hidden;
+        display: grid;
+        align-items: center;
+        transform: translate(1%,0);
+        grid-template-columns: repeat(auto-fit,minmax(50px,0.5fr 1fr));
+    }
+    .banner{
+        height: 50vh;
+    }
+    .heading{
+        font-size: 20px;
+    }
+    .about-description h3,.other-description h3{
+        font-size: 20px;
+    }
+    .about-description p,.other-description p{
+        font-size: 15px;
+        margin: 0px;
+    }
+    .nav-open{
+        height: 40vh;
+    }
+    .contact h3{
+        font-size: 19px;
+    }
+    .social h3{
+        font-size: 19px;
+    }
+    .profile{
+        width: 490px;
+        overflow: hidden;
+    }
+        
+    
+
+    @media(max-width: 530px){
+        .page{
+            grid-template-columns: 5% 1fr 5% ;
+            grid-template-rows: 300px 150px;
+        }
+        .food{
+            height: auto;
+        }
+        .hero img{
+            height: 170px;
+            width: auto;
+        }
+        .details h1{
+            font-size: 20px;
+        }
+        .details p{
+            font-size: 17px;
+            padding-bottom: 0;
+        }
+        .hero{
+            height: 170;
+            margin-top: auto;
+            width:auto;
+            margin-bottom: 0;
+        }
+        .pages img{
+            height: 8px;
+            width: 8px;
+        }
+        .page-1,.page-2,.page-3{
+            padding: 2px;
+        }
+        .pages h5{
+            font-size: 11px;
+            padding: 3px;
+        }
+        .pages{
+         position: absolute;
+         top: 45%;
+         left: 87%;
+         align-items: baseline;
+         justify-content: center;
+         align-items: center;
+         justify-items: center;
+        }
+        .logo{
+            font-size: 10px;
+        }
+        nav{
+            height: 60;
+        }
+        #navbar{
+            height: 35;
+            width: 35;
+        }
+        .pizza{
+            /* height: 200; */
+        }
+        .banner{
+            height: 200px;
+            width: auto;
+        }
+        .heading{
+            font-size: 15px;
+        }
+        #head2{
+            position: absolute;
+            top: 40%;
+        }
+        .about h3,.other h3{
+            font-size: 18px;
+            padding: 0px;
+            margin-left: 5px;
+        }
+        .about p,.other p{
+            font-size: 13px;
+            padding: 5px;
+        }
+        .profile img{
+            height: 150px;
+            width: auto;
+            margin-left: 5px;
+        }
+        .grilledchicken{
+            height: 900;
+            overflow: hidden;
+        }
+        .work-gallery{
+            height: 220px;
+            width: 332px;
+            display: grid;
+            grid-template-columns: 166px 166px;
+            grid-template-rows: 110px 110px;
+        }
+        .work-gallery img{
+            height: 110px;
+            width: auto;
+        }
+        .other{
+            transform: translate(0,-22%);
+        }
+        .other h3{
+            padding-top: 100px;
+        }
+        .profile{
+            transform: translate(4%,-0.5%);
+            width: 293;
+        }
+        .grilledback{
+            height: auto;
+        }
+        .burgerback{
+            height: auto;
+        }
+        .pizzaback{
+            height: auto;
+        }
+        .contact h3{
+            font-size: 12px;
+            padding-bottom: 0px;
+        }
+        .contact p{
+            font-size: 10px;
+            padding-top: 3px;
+        }
+        .social h3{
+            font-size: 12px;
+            padding-bottom: 0px;
+            transform: translate(0,20%);
+        }   
+        .nav-open{
+            height: 28vh;
+        }
+        .social-links{
+            justify-self: center;
+            justify-content: center;
+            align-self: center;
+            align-items: center;
+            display: inline;
+        }
+        .social-links img{
+            margin-right: 1px;
+            margin-left: 1px;
+            height: 13px;
+            width: 13px;
+            padding-top: 0;
+        }
+    }
+    
+}
